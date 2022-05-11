@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+
+<h1>Order confirmation</h1>
+
+<h2>Product: {{.Product}}</h2>
+<h3>Total: {{.Price}} €</h3>
+
+<form action="/finish" method="post">
+    <input type="hidden" name="product_id" value="{{.Uuid}}">
+    Name: <input type="text" name="name"><br>
+    Email: <input type="text" name="email"><br>
+    Phone: <input type="text" name="phone"><br>
+    <button>Confirm</button>
+</form>
+
+</body>
+</html>
